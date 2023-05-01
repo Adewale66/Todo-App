@@ -6,7 +6,7 @@ const Control = () => {
 
   return (
     <div className="flex items-center justify-between relative px-[1.5rem] pt-5  pb-[1.25rem]">
-      <div className="min-w-[69px]">
+      <div className="min-w-[80px]">
         <span className="font-[400] text-[0.875rem]  dark:text-Very-Dark-Grayish-Blue2 dark:hover:text-Light-Grayish-Blue text-Dark-Grayish-Blue">
           {allTasks.length} items left
         </span>
