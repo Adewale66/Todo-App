@@ -2,13 +2,28 @@ import { Tasks } from '../types/type';
 import { useTasksStore } from '../store/store';
 
 const Items: React.FC<{ item: Tasks }> = ({ item }) => {
-  const { removeTask, toggle } = useTasksStore();
+  const { removeTask, toggle, allTasks } = useTasksStore();
 
   const handleClicked = () => {
     toggle(item);
+    const updatedTasks = allTasks.map((task) => {
+      if (task.id === item.id) {
+        return {
+          ...task,
+          clicked: !task.clicked,
+        };
+      }
+      return task;
+    });
+
+    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
   };
   const remove = () => {
     removeTask(item);
+    console.log(allTasks);
+    const updatedTasks = allTasks.filter((task) => task.id !== item.id);
+
+    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
   };
 
   return (
