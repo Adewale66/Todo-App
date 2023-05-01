@@ -36,7 +36,7 @@ const Items: React.FC<{ item: Tasks }> = ({ item }) => {
         }
         onClick={handleClicked}>
         {item.clicked ? (
-          <img src="src/assets/images/icon-check.svg" alt="check"></img>
+          <img src="assets/images/icon-check.svg" alt="check"></img>
         ) : (
           ''
         )}
@@ -51,7 +51,7 @@ const Items: React.FC<{ item: Tasks }> = ({ item }) => {
       </span>
       <div className="ml-auto hidden group-hover:block max-[676px]:block">
         <button onClick={remove}>
-          <img src="src/assets/images/icon-cross.svg" alt="cross" />
+          <img src="assets/images/icon-cross.svg" alt="cross" />
         </button>
       </div>
     </div>
