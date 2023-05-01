@@ -45,9 +45,9 @@ const Header = () => {
           className="hover:cursor-pointer"
           onClick={() => toggleTheme(themeStoreValue)}>
           {themeStoreValue.theme === 'light' ? (
-            <img src="src/assets/images/icon-moon.svg" alt="moon logo" />
+            <img src="assets/images/icon-moon.svg" alt="moon logo" />
           ) : (
-            <img src="src/assets/images/icon-sun.svg" alt="sun logo" />
+            <img src="assets/images/icon-sun.svg" alt="sun logo" />
           )}
         </button>
       </header>
