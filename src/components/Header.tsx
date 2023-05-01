@@ -4,6 +4,8 @@ import { MantineProvider, Input } from '@mantine/core';
 import { v4 } from 'uuid';
 import { useTasksStore, themeStore } from '../store/store';
 import { toggleTheme } from '../lib/util';
+import moon from '../assets/images/icon-moon.svg';
+import sun from '../assets/images/icon-sun.svg';
 
 const Header = () => {
   const localTheme = localStorage.getItem('theme');
@@ -45,9 +47,9 @@ const Header = () => {
           className="hover:cursor-pointer"
           onClick={() => toggleTheme(themeStoreValue)}>
           {themeStoreValue.theme === 'light' ? (
-            <img src="assets/images/icon-moon.svg" alt="moon logo" />
+            <img src={moon} alt="moon logo" />
           ) : (
-            <img src="assets/images/icon-sun.svg" alt="sun logo" />
+            <img src={sun} alt="sun logo" />
           )}
         </button>
       </header>

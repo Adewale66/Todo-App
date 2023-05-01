@@ -1,5 +1,6 @@
 import { Tasks } from '../types/type';
 import { useTasksStore } from '../store/store';
+import cross from '../assets/images/icon-cross.svg';
 
 const Items: React.FC<{ item: Tasks }> = ({ item }) => {
   const { removeTask, toggle, allTasks } = useTasksStore();
@@ -36,7 +37,7 @@ const Items: React.FC<{ item: Tasks }> = ({ item }) => {
         }
         onClick={handleClicked}>
         {item.clicked ? (
-          <img src="assets/images/icon-check.svg" alt="check"></img>
+          <img src="assets/images/icon-check.svg" alt=""></img>
         ) : (
           ''
         )}
@@ -51,7 +52,7 @@ const Items: React.FC<{ item: Tasks }> = ({ item }) => {
       </span>
       <div className="ml-auto hidden group-hover:block max-[676px]:block">
         <button onClick={remove}>
-          <img src="assets/images/icon-cross.svg" alt="cross" />
+          <img src={cross} alt="cross" />
         </button>
       </div>
     </div>
